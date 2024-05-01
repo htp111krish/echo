@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,15 +40,57 @@ https://templatemo.com/tm-579-cyborg-gaming
     .heading-section h4 {
       margin: 0;
     }
-
-    .analysis-btn {
-      padding: 10px 20px;
-      background-color:#e75e8d;
+    #statusButton {
+        padding: 10px 20px;
+      background-color: #007bff;
       color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 14px;
+    color: #fff;
+    background-color: #e75e8d;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 36px;    
     }
+    
+    #statusButton:hover {
+        background-color: #FFFFFF;
+            color: #e75e8d
+    }
+    .analysis-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 16px;
+      font-size: 14px;
+    color: #fff;
+    background-color: #e75e8d;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    }
+    .analysis-btn:hover {
+            background-color: #FFFFFF;
+            color: #e75e8d;
+        }
   </style>
 </head>
 
@@ -119,20 +162,20 @@ https://templatemo.com/tm-579-cyborg-gaming
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
-                      <span>Offline</span>
+                      <button id="statusButton" onclick="toggleStatus()">Offline</button>
                       <h4>Alan Smithee</h4>
-                      <p>You Haven't Gone Live yet. Go Live By Touching The Button Below.</p>
+                      <p>Bio</p>
                       <div class="main-border-button">
-                        <a href="#">Set Priority</a>
+                        <a href="priority.html">Set Priority</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <ul>
-                      <li>Games Downloaded <span>3</span></li>
-                      <li>Friends Online <span>16</span></li>
-                      <li>Live Streams <span>None</span></li>
-                      <li>Clips <span>29</span></li>
+                      <li>Apps Downloaded <span>3</span></li>
+                      <li>Contacts Online <span>16</span></li>
+                      <li>Reply pending <span>None</span></li>
+                      <li>Media <span>29</span></li>
                     </ul>
                   </div>
                 </div>
@@ -143,7 +186,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                         <div class="col-lg-12">
                           <div class="heading-section">
                             <h4><em>Your </em> Apps</h4>
-                            <button class="analysis-btn">Analysis</button>
+                            <button onclick="window.location.href='piechart.html'" class="analysis-btn">Analysis</button>
                           </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
@@ -162,7 +205,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                           <div class="item">
                             <div class="thumb">
                               <img src="assets/images/clip-02.jpg" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
                               <h4>Gmail</h4>
@@ -174,7 +217,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                           <div class="item">
                             <div class="thumb">
                               <img src="assets/images/clip-03.jpg" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                              <a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
                               <h4>LinkdIn</h4>
@@ -186,7 +229,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                           <div class="item">
                             <div class="thumb">
                               <img src="assets/images/clip-04.jpg" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                              <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
                               <h4>Instagram</h4>
@@ -196,7 +239,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                         </div>
                         <div class="col-lg-12">
                           <div class="main-button">
-                            <a href="#">Add More Apps</a>
+                            <a href="browse.html">Add More Apps</a>
                           </div>
                         </div>
                       </div>
@@ -206,57 +249,55 @@ https://templatemo.com/tm-579-cyborg-gaming
               </div>
             </div>
           </div>
-          <!-- ***** Banner End ***** -->
-
-          <!-- ***** Gaming Library Start ***** -->
+         
           <div class="gaming-library profile-library">
             <div class="col-lg-12">
               <div class="heading-section">
-                <h4><em>Your Gaming</em> Library</h4>
+                <h4><em>Your Priority</em>Apps</h4>
               </div>
               <div class="item">
                 <ul>
                   <li><img src="assets/images/game-01.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Whatsapp</h4><span></span></li>
-                  <li><h4>Last Seen</h4><span>24/08/2036</span></li>
+                  <li><h4>Whatsapp</h4><span>Last Seen: 24/08/2036</span></li>
+                  <li><h4>Last Seen</h4><span>22/06/2036</span></li>  
                   <li><h4>Screen Time</h4><span>634 H 22 Mins</span></li>
                   <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                  <li><div class="main-border-button border-no-active"><a href="https://web.whatsapp.com/">View & Reply</a></div></li>
                 </ul>
               </div>
               <div class="item">
                 <ul>
                   <li><img src="assets/images/game-02.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
+                  <li><h4>Gmail</h4><span>Sandbox</span></li>
                   <li><h4>Last Seen</h4><span>22/06/2036</span></li>
                   <li><h4>Screen Time</h4><span>745 H 22 Mins</span></li>
                   <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                  <li><div class="main-border-button border-no-active"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">View & Reply</a></div></li>
                 </ul>
               </div>
-              <div class="item last-item">
+              <div class="item">
                 <ul>
                   <li><img src="assets/images/game-03.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
+                  <li><h4>LinkedIn</h4><span>Sandbox</span></li>
                   <li><h4>Last Seen</h4><span>21/04/2022</span></li>
                   <li><h4>Screen Time</h4><span>632 H 46 Mins</span></li>
                   <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                  <li><div class="main-border-button border-no-active"><a href="https://in.linkedin.com/    ">View & Reply</a></div></li>
                 </ul>
               </div>
               <div class="item last-item">
                 <ul>
                   <li><img src="assets/images/game-04.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Instagram</h4><span></span></li>
+                  <li><h4>Instagram</h4><span>Last Seen: 21/04/2022</span></li>
                   <li><h4>Last Seen</h4><span>21/04/2022</span></li>
                   <li><h4>Screen Time</h4><span>632 H 46 Mins</span></li>
                   <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                  <li><div class="main-border-button border-no-active"><a href="https://www.instagram.com/">View & Reply</a></div></li>
                 </ul>
               </div>
-
             </div>
           </div>
+          
           <!-- ***** Gaming Library End ***** -->
         </div>
       </div>
@@ -286,7 +327,16 @@ https://templatemo.com/tm-579-cyborg-gaming
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
-
+  <script>
+    function toggleStatus() {
+      var statusButton = document.getElementById("statusButton");
+      if (statusButton.textContent === "Offline") {
+        statusButton.textContent = "Online";
+      } else {
+        statusButton.textContent = "Offline";
+      }
+    }
+  </script>
 
 </body>
 
