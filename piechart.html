@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Page</title>
+  <!-- Include Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Styles for chart container */
+    .chart-container {
+      width: 800px;
+      margin: 50px auto;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1a1a; /* Updated background color to black */
+      color: #fff; /* Updated text color to white */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      color: #EC6090;
+      font-weight: 600;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      font-size: 14px;
+    color: #fff;
+    background-color: #e75e8d;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    }
+
+    button:hover {
+      background-color: #ffffff;
+      color: #e75e8d;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      font-size: 16px;
+      background-color: #fff; /* Ensure input field has white background */
+      color: #333; /* Ensure text color is readable */
+    }
+
+    canvas {
+      background-color: #1a1a1a; /* Updated canvas background color */
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>App Analysis</h1>
+    <div>
+      <input type="text" id="appName" placeholder="Enter the app name">
+      <button onclick="addApp()">Add App</button>
+      <button onclick="removeApp()">Remove App</button>
+    </div>
+    <div class="chart-container">
+      <!-- Bar Chart -->
+      <canvas id="barChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <!-- Pie Chart -->
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // Initial data for analysis
+    let data = {
+      labels: [],
+      watchTime: [],
+      timesOpened: []
+    };
+
+    // Function to generate a random color
+    function randomColor() {
+      return `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.5)`;
+    }
+
+    // Function to add a new app
+    function addApp() {
+      const appName = document.getElementById('appName').value;
+      if (appName) {
+        data.labels.push(appName);
+        data.watchTime.push(Math.floor(Math.random() * 300) + 100); // Random watch time between 100 and 400 minutes
+        data.timesOpened.push(Math.floor(Math.random() * 30) + 5); // Random times opened between 5 and 35
+        updateCharts();
+      }
+    }
+
+    // Function to remove an app
+    function removeApp() {
+      const appName = prompt("Enter the app name to remove:");
+      const index = data.labels.indexOf(appName);
+      if (index !== -1) {
+        data.labels.splice(index, 1);
+        data.watchTime.splice(index, 1);
+        data.timesOpened.splice(index, 1);
+        updateCharts();
+      } else {
+        alert("App not found!");
+      }
+    }
+
+    // Function to update charts with new data
+    function updateCharts() {
+      barChart.data.labels = data.labels;
+      barChart.data.datasets[0].data = data.watchTime;
+      pieChart.data.labels = data.labels;
+      pieChart.data.datasets[0].data = data.timesOpened;
+      barChart.data.datasets[0].backgroundColor = data.labels.map(() => randomColor()); // Generate random colors for each bar
+      pieChart.data.datasets[0].backgroundColor = generateRandomColors(data.labels.length); // Generate random colors for pie chart
+      barChart.update();
+      pieChart.update();
+    }
+
+    // Function to generate an array of random colors
+    function generateRandomColors(count) {
+      let colors = [];
+      for (let i = 0; i < count; i++) {
+        colors.push(randomColor());
+      }
+      return colors;
+    }
+
+    // Create initial bar chart
+    var ctxBar = document.getElementById('barChart').getContext('2d');
+    var barChart = new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          label: 'Watch Time (minutes)',
+          data: data.watchTime,
+          backgroundColor: data.labels.map(() => randomColor()), // Generate random colors for each bar
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    // Create initial pie chart
+    var ctxPie = document.getElementById('pieChart').getContext('2d');
+    var pieChart = new Chart(ctxPie, {
+      type: 'pie',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          label: 'Times Opened',
+          data: data.timesOpened,
+          backgroundColor: generateRandomColors(data.labels.length), // Generate random colors for pie chart
+          borderWidth: 1
+        }]
+      }
+    });
+  </script>
+</body>
+
+</html>
