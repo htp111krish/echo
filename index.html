@@ -1,287 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <title>Cyborg - Awesome HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <style>
+        .messaging-apps {
+            margin-top: 50px;
+        }
 
-TemplateMo 579 Cyborg Gaming
+        .app-logo {
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+        }
 
-https://templatemo.com/tm-579-cyborg-gaming
+        .app-logo img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
--->
-  </head>
+        .notification-list {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .notification-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        .notification-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .notification-content {
+            flex-grow: 1;
+        }
+
+        .notification-content .app-name {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .notification-content p {
+            margin: 0;
+            color: #fff;
+        }
+    </style>
+
+</head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                        <div class="search-input">
+                            <form id="search" action="#">
+                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
+                                    onkeypress="handle" />
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </div>
+                        <ul class="nav">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="browse.html">Browse</a></li>
+                            <li><a href="details.html">Details</a></li>
+                            <li><a href="login.html">Logins/sign up</a></li>
+                            <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg"
+                                        alt=""></a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Search End ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Search End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="login.html">Logins/sign up</a></li>
-                        <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="page-content">
-
-          <!-- ***** Banner Start ***** -->
-          <div class="main-banner">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="header-text">
-                  <h6>Welcome To Echo</h6>
-                  <h4><em>Browse</em>SEE ALL YOUR NOTIFICATION</h4>
-                  <div class="main-button">
-                    <a href="browse.html">Browse Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ***** Banner End ***** -->
-
-          <!-- ***** Most Popular Start ***** -->
-          <div class="most-popular">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4><em>Most Popular</em> Right Now</h4>
-                </div>
-                <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-01.jpg" alt="">
-                      <h4>Fortnite<br><span>Sandbox</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-02.jpg" alt="">
-                      <h4>PubG<br><span>Battle S</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-03.jpg" alt="">
-                      <h4>Dota2<br><span>Steam-X</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-04.jpg" alt="">
-                      <h4>CS-GO<br><span>Legendary</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                          <div class="item inner-item">
-                            <img src="assets/images/popular-05.jpg" alt="">
-                            <h4>Mini Craft<br><span>Legendary</span></h4>
-                            <ul>
-                              <li><i class="fa fa-star"></i> 4.8</li>
-                              <li><i class="fa fa-download"></i> 2.3M</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                          <div class="item">
-                            <img src="assets/images/popular-06.jpg" alt="">
-                            <h4>Eagles Fly<br><span>Matrix Games</span></h4>
-                            <ul>
-                              <li><i class="fa fa-star"></i> 4.8</li>
-                              <li><i class="fa fa-download"></i> 2.3M</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-07.jpg" alt="">
-                      <h4>Warface<br><span>Max 3D</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/images/popular-08.jpg" alt="">
-                      <h4>Warcraft<br><span>Legend</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="main-button">
-                      <a href="browse.html">Discover Popular</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ***** Most Popular End ***** -->
-
-          <!-- ***** Gaming Library Start ***** -->
-          <div class="gaming-library">
             <div class="col-lg-12">
-              <div class="heading-section">
-                <h4><em>Your Gaming</em> Library</h4>
-              </div>
-              <div class="item">
-                <ul>
-                  <li><img src="assets/images/game-01.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Dota 2</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>24/08/2036</span></li>
-                  <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
-              <div class="item">
-                <ul>
-                  <li><img src="assets/images/game-02.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>22/06/2036</span></li>
-                  <li><h4>Hours Played</h4><span>740 H 52 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button"><a href="#">Donwload</a></div></li>
-                </ul>
-              </div>
-              <div class="item last-item">
-                <ul>
-                  <li><img src="assets/images/game-03.jpg" alt="" class="templatemo-item"></li>
-                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>21/04/2036</span></li>
-                  <li><h4>Hours Played</h4><span>892 H 14 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
+                <div class="page-content">
+                    <!-- ***** Banner Start ***** -->
+                    <div class="main-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="header-text">
+                                    <h6>Welcome To Echo</h6>
+                                    <h4><em>Browse</em>SEE ALL YOUR NOTIFICATION</h4>
+                                    <div class="main-button">
+                                        <a href="#messaging-apps">See Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***** Banner End ***** -->
+                    <!-- ***** Messaging Apps Logos and Notifications Start ***** -->
+                    <div id="messaging-apps" class="messaging-apps">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="heading-section">
+                                    <h4><em>Messaging Apps</em> Notifications</h4>
+                                </div>
+                                <div class="notification-list">
+                                    <!-- Notifications will be dynamically added here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***** Messaging Apps Logos and Notifications End ***** -->
+                    <!-- ***** Most Popular Start ***** -->
+                    <!-- Your existing content for most popular section -->
+                    <!-- ***** Most Popular End ***** -->
+                    <!-- ***** Gaming Library Start ***** -->
+                    <!-- Your existing content for gaming library section -->
+                    <!-- ***** Gaming Library End ***** -->
+                </div>
             </div>
-            <div class="col-lg-12">
-              <div class="main-button">
-                <a href="profile.html">View Your Library</a>
-              </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved.
+                        <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a>
+                    </p>
+                </div>
             </div>
-          </div>
-          <!-- ***** Gaming Library End ***** -->
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
-          
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling when clicking on a button
+            $('.main-button a').on('click', function (e) {
+                if (this.hash !== '') {
+                    e.preventDefault();
 
+                    const hash = this.hash;
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 2000); // Changed duration to 2000 milliseconds (2 seconds)
+                }
+            });
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+            // Function to generate notifications for different messaging apps
+            function generateNotifications(app) {
+                switch (app) {
+                    case 'whatsapp':
+                        // Add WhatsApp notifications
+                        for (var i = 0; i < 3; i++) {
+                            var whatsappNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/clip-01.jpg" alt="WhatsApp Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">WhatsApp</span>' +
+                                '<p>Message from John: Hello there!</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(whatsappNotificationHTML);
+                        }
+                        break;
+                    case 'facebook':
+                        // Add Facebook notifications
+                        for (var i = 0; i < 3; i++) {
+                            var facebookNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/facebook.png" alt="Facebook Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">Facebook</span>' +
+                                '<p>You have a new friend request from Alice.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(facebookNotificationHTML);
+                        }
+                        break;
+                    case 'instagram':
+                        // Add Instagram notifications
+                        for (var i = 0; i < 3; i++) {
+                            var instagramNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/clip-04.jpg" alt="Instagram Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">Instagram</span>' +
+                                '<p>You have a new follower: @john_doe.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(instagramNotificationHTML);
+                        }
+                        break;
+                    case 'wechat':
+                        // Add WeChat notifications
+                        for (var i = 0; i < 3; i++) {
+                            var wechatNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/wechat.png" alt="WeChat Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">WeChat</span>' +
+                                '<p>Message from: @alice_wechat.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(wechatNotificationHTML);
+                        }
+                        break;
+                    case 'twitter':
+                        // Add Twitter notifications
+                        for (var i = 0; i < 3; i++) {
+                            var twitterNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/twitter.png" alt="Twitter Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">Twitter</span>' +
+                                '<p>New tweet from @cyborggaming: Check out our latest updates!</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(twitterNotificationHTML);
+                        }
+                        break;
+                    case 'snapchat':
+                        // Add Snapchat notifications
+                        for (var i = 0; i < 3; i++) {
+                            var snapchatNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/snapchat.png" alt="Snapchat Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">Snapchat</span>' +
+                                '<p>You have a new snap from @bob_snap.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(snapchatNotificationHTML);
+                        }
+                        break;
+                    case 'gmail':
+                        // Add Gmail notifications
+                        for (var i = 0; i < 3; i++) {
+                            var gmailNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/clip-02.png" alt="Gmail Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">Gmail</span>' +
+                                '<p>You have received a new email.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(gmailNotificationHTML);
+                        }
+                        break;
+                    case 'linkedin':
+                        // Add LinkedIn notifications
+                        for (var i = 0; i < 3; i++) {
+                            var linkedinNotificationHTML = '<div class="notification-item">' +
+                                '<img src="assets/images/clip-03.jpg" alt="LinkedIn Logo">' +
+                                '<div class="notification-content">' +
+                                '<span class="app-name">LinkedIn</span>' +
+                                '<p>New connection request from John Doe.</p>' +
+                                '</div>' +
+                                '</div>';
+                            $('.notification-list').append(linkedinNotificationHTML);
+                        }
+                        break;
+                    // Add cases for other apps here
+                }
+            }
 
+            // Generate notifications for each messaging app
+            generateNotifications('whatsapp');
+            generateNotifications('facebook');
+            generateNotifications('instagram');
+            generateNotifications('wechat');
+            generateNotifications('twitter');
+            generateNotifications('snapchat');
+            generateNotifications('gmail');
+            generateNotifications('linkedin');
+            // Add other messaging apps here
 
-  </body>
+        });
+    </script>
+</body>
 
 </html>
